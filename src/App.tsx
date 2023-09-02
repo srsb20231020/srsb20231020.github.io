@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   defaultDarkModeOverride,
   Badge,
@@ -15,6 +15,11 @@ import photo_sample_1 from './img/photo_sample_1.png';
 import map from './img/map.png';
 
 function App() {
+
+  useEffect(() => {
+    const mapDiv = document.getElementById("naverMap");
+    const map = new window.naver.maps.Map(mapDiv);
+  }, []);
 
   // fun points
   // first load - show video?
@@ -107,6 +112,8 @@ function App() {
         </View>
 
         <img src={map} className='MainPhoto' />
+
+        <div id="naverMap" style={{ width: "400px", height: "400px" }} />
 
         <Divider />
 
