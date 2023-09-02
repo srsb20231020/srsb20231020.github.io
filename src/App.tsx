@@ -24,14 +24,15 @@ function App() {
   const isShowing = Date.now() < Date.parse('2023-10-22T00:00:00+09:00');
 
   return (
-    isShowing
-    ? <ThemeProvider>
+    isShowing ?
+    <ThemeProvider>
       <Flex
         direction='column'
         alignItems='center'
         backgroundColor='background.tertiary'
+        className='App'
       >
-        <Heading level={3} className='heading'>성보와 세란의 결혼식에 초대합니다</Heading>
+        <Heading level={3} className='Heading'>성보와 세란의 결혼식에 초대합니다</Heading>
 
         <img src={photo_sample_1} className='MainPhoto' />
         
