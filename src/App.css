@@ -2,6 +2,12 @@
   width: 30%;
 }
 
-.MapPhoto {
-  width: 30%; 
+.Map {
+  width: 60%;
+  height: 60%;
+}
+
+.GoogleMap {
+  width: 60%;
+  height: 500px;
 }

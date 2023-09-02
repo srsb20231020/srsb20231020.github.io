@@ -16,45 +16,10 @@ import map from './img/map.png';
 
 function App() {
 
-  useEffect(() => {
-    const mapDiv = document.getElementById("naverMap");
-    const map = new window.naver.maps.Map(mapDiv);
-  }, []);
-
   // fun points
   // first load - show video?
   // until the day - show the wedding invitation context
   // after the day - hide the wedding invitation
-
-  // const colorMode = 'dark';
-  // const theme: Theme = {
-  //   name: 'my-theme',
-  //   overrides: [
-  //     defaultDarkModeOverride,
-  //     {
-  //       colorMode: 'dark',
-  //       tokens: {
-  //         colors: {
-  //           font: {
-  //             primary: { value: '{colors.pink.100}' },
-  //             secondary: { value: '{colors.pink.90}' },
-  //             tertiary: { value: '{colors.pink.80}' },
-  //           },
-  //           background: {
-  //             primary: { value: '{colors.purple.10}' },
-  //             secondary: { value: '{colors.purple.20}' },
-  //             tertiary: { value: '{colors.purple.40}' },
-  //           },
-  //           border: {
-  //             primary: { value: '{colors.pink.60}' },
-  //             secondary: { value: '{colors.pink.40}' },
-  //             tertiary: { value: '{colors.pink.20}' },
-  //           },
-  //         },
-  //       },
-  //     },
-  //   ],
-  // };
 
   const isShowing = Date.now() < Date.parse('2023-10-22T00:00:00+09:00');
 
@@ -111,9 +76,11 @@ function App() {
           </Flex>
         </View>
 
-        <img src={map} className='MainPhoto' />
-
-        <div id="naverMap" style={{ width: "400px", height: "400px" }} />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2595127220497!2d127.06600069999998!3d37.501797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca5532bc0e133%3A0x98187055c9b13e4a!2z7Yq4652865SU64W47J20!5e0!3m2!1sko!2sca!4v1693635400146!5m2!1sko!2sca"
+          className='GoogleMap'
+          loading="lazy"
+        />
 
         <Divider />
 
