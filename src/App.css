@@ -12,16 +12,11 @@
 }
 
 .MainPhoto {
-  width: 30%;
-}
-
-.Map {
   width: 60%;
-  height: 60%;
 }
 
 .GoogleMap {
-  width: 60%;
+  width: 90%;
   height: 500px;
 }
 
