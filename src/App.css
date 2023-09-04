@@ -7,7 +7,8 @@
 
 .App {
   font-family: 'JSDongkang-Regular';
-  background-image: url(/src/img/old_paper_img.png);
+  background-image: url(/src/img/korean_paper_1.png);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
