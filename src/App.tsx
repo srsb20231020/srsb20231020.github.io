@@ -3,8 +3,11 @@ import {
   defaultDarkModeOverride,
   Badge,
   Divider,
+  Expander,
+  ExpanderItem,
   Flex,
   Heading,
+  Image,
   Text,
   Theme,
   ThemeProvider,
@@ -13,6 +16,11 @@ import {
 import './App.css'
 import photo_sample_1 from './img/photo_sample_1.png';
 import map from './img/map.png';
+import btn_send_tiny from './img/btn_send_tiny.png';
+
+// TODO: Replace etransfer links below with their owns
+const ETRANSFER_LINK_BHS = 'https://qr.kakaopay.com/Ej8mKERGe';
+const ETRANSFER_LINK_MTJ = 'https://qr.kakaopay.com/Ej8mKERGe';
 
 function App() {
 
@@ -29,12 +37,11 @@ function App() {
       <Flex
         direction='column'
         alignItems='center'
-        backgroundColor='background.tertiary'
         className='App'
       >
         <Heading level={3} className='Heading'>성보와 세란의 결혼식에 초대합니다</Heading>
 
-        <img src={photo_sample_1} className='MainPhoto' />
+        <Image src={photo_sample_1} className='MainPhoto' alt='' />
         
         <Flex
           direction='column'
@@ -76,7 +83,7 @@ function App() {
             <Text>🚙 트라디노이 건물 1층 주차장 이용 / 만차시 대치2동 문화센터 공용주차장 이용</Text>
           </Flex>
         </View>
-
+        
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2595127220497!2d127.06600069999998!3d37.501797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca5532bc0e133%3A0x98187055c9b13e4a!2z7Yq4652865SU64W47J20!5e0!3m2!1sko!2sca!4v1693635400146!5m2!1sko!2sca"
           className='GoogleMap'
@@ -91,8 +98,20 @@ function App() {
           gap='0rem'
         >
           <Heading level={5}>마음 전하실 곳</Heading>
-          <Text>변해숙 119-168643-00107 KEB하나은행</Text>
-          <Text>민태자 469302-01-019772 KB국민은행</Text>
+          <Flex
+            direction='row'
+            justifyContent='center'
+          >
+            <Text className='Etransfer'>변해숙 119-168643-00107 KEB하나은행</Text>
+            <Image className='KakaoButton' src={btn_send_tiny} alt='' onClick={() => window.open(ETRANSFER_LINK_BHS)}/>
+          </Flex>
+          
+          <Divider/>
+
+          <Flex>
+            <Text className='Etransfer'>민태자 469302-01-019772 KB국민은행</Text>
+            <Image className='KakaoButton'src={btn_send_tiny} alt='' onClick={() => window.open(ETRANSFER_LINK_MTJ)}/>
+          </Flex>
         </Flex>
       </Flex>
     </ThemeProvider>

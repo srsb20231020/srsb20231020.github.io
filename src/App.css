@@ -7,6 +7,8 @@
 
 .App {
   font-family: 'JSDongkang-Regular';
+  background-image: url(/src/img/old_paper_img.png);
+  background-size: cover;
 }
 
 .MainPhoto {
@@ -21,4 +23,13 @@
 .GoogleMap {
   width: 60%;
   height: 500px;
+}
+
+.Etransfer {
+  margin: 10px;
+}
+
+.KakaoButton {
+  margin: 5px;
+  height: 100%;
 }
