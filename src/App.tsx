@@ -16,11 +16,7 @@ import {
 import './App.css'
 import photo_sample_1 from './img/photo_sample_1.png';
 import map from './img/map.png';
-import btn_send_tiny from './img/btn_send_tiny.png';
 
-// TODO: Replace etransfer links below with their owns
-const ETRANSFER_LINK_BHS = 'https://qr.kakaopay.com/Ej8mKERGe';
-const ETRANSFER_LINK_MTJ = 'https://qr.kakaopay.com/Ej8mKERGe';
 
 function App() {
 
@@ -39,7 +35,7 @@ function App() {
         alignItems='center'
         className='App'
       >
-        <Heading level={3} className='Heading'>성보와 세란의 결혼식에 초대합니다</Heading>
+        <Heading level={1} className='Heading'>성보와 세란의 결혼식에 초대합니다</Heading>
 
         <Image src={photo_sample_1} className='MainPhoto' alt='' />
         
@@ -47,40 +43,85 @@ function App() {
           direction='column'
           alignItems='center'
           gap='0rem'
+          className='context'
         >
           <Text as='p'>강성보 ﹒ 맹세란</Text>
           <Text as='p'>2023년 10월 20일 금요일 17:00</Text>
           <Text as='p'>트라디노이 6층</Text>
         </Flex>
 
-        <Flex className='context'>
-          두 사람, 서로에게 위로와 감동이 되어주고자 합니다.
-          저희의 소중한 날에 함께해 주세요.
+        <Flex
+          direction='column'
+          className='context'
+          alignItems='center'
+          gap='0rem'
+        >
+          <Text className='centeredText'>두 사람, 서로에게 위로와 감동이 되어주고자 합니다.</Text>
+          <Text className='centeredText'>저희의 소중한 날에 함께해 주세요.</Text>
         </Flex>
 
-        <Flex direction='row' justifyContent='space-around'>
-          <Text>강범원 ﹒ 변해숙의 장남 🤵🏻 강성보</Text>
+        <Flex direction='row' justifyContent='space-around' className='context'>
+          <Flex direction='column' gap='0.2rem' alignItems='center'>
+            <Text>강범원 ﹒ 변해숙의 장남</Text>
+            <Text>🤵🏻 강성보</Text>
+          </Flex>
           <Divider orientation='vertical'/>
-          <Text>임경순 ﹒ 민태자의 장녀 👰🏻 맹세란</Text>
+          <Flex direction='column' gap='0.2rem' alignItems='center'>
+            <Text>임경순 ﹒ 민태자의 장녀</Text>
+            <Text>👰🏻 맹세란</Text>
+          </Flex>
         </Flex>
 
         <View className='context'>
-          <Badge>화환은 정중히 사양합니다. 감사한 마음만 받겠습니다.</Badge>
+          <Badge variation='success'>
+            <Flex direction='column' gap='0.2rem'>
+              <Text>화환은 정중히 사양합니다.</Text>
+              <Text>감사한 마음만 받겠습니다.</Text>
+            </Flex>
+              {/*화환은 정중히 사양합니다. 감사한 마음만 받겠습니다.*/}
+          </Badge>
         </View>
 
         <Divider />
 
         <View textAlign='center'>
-          <Heading level={5}>오시는 길</Heading>
+          
           <Flex
             direction='column'
             alignItems='center'
-            gap='0rem'
+            gap='0.3rem'
           >
-            <Text>📍 서울특별시 강남구 도곡로 99길 16, 6층 트라디노이 (T. 02-567-9916)</Text>
+            <Heading level={6}>오시는 길</Heading>
+            
+            <View>
+              📍
+              <Text>서울특별시 강남구 도곡로 99길 16</Text>
+              <Text>6층 트라디노이 (T. 02-567-9916)</Text>
+            </View>
+            
+            <View>
+              🚊
+              <Text>삼성역 3번출구 또는 학여울역 1번출구</Text>
+              <Text>도보로 8분</Text>
+            </View>
+            
+            <View>
+              🚌
+              <Text>마을버스 강남 01, 06</Text>
+              <Text>간선 401</Text>
+              <Text>지선 4318, 4319</Text>
+              <Text>대치2동 주민센터 하차후 도보로 1-2분</Text>
+            </View>
+
+            <View>
+              🚙
+              <Text>트라디노이 건물 1층 주차장 이용</Text>
+              <Text>만차시 대치2동 문화센터 공용주차장 이용</Text>
+            </View>
+            {/*<Text>📍서울특별시 강남구 도곡로 99길 16, 6층 트라디노이 (T. 02-567-9916)</Text>
             <Text>🚊 삼성역 3번출구 또는 학여울역 1번출구 도보로 8분</Text>
             <Text>🚌 마을버스 강남 01, 06 / 간선 401 / 지선 4318, 4319 대치2동 주민센터 하차후 도보로 1-2분</Text>
-            <Text>🚙 트라디노이 건물 1층 주차장 이용 / 만차시 대치2동 문화센터 공용주차장 이용</Text>
+            <Text>🚙 트라디노이 건물 1층 주차장 이용 / 만차시 대치2동 문화센터 공용주차장 이용</Text>*/}
           </Flex>
         </View>
         
@@ -97,20 +138,18 @@ function App() {
           alignItems='center'
           gap='0rem'
         >
-          <Heading level={5}>마음 전하실 곳</Heading>
+          <Heading level={6}>마음 전하실 곳</Heading>
           <Flex
             direction='row'
             justifyContent='center'
           >
             <Text className='Etransfer'>변해숙 119-168643-00107 KEB하나은행</Text>
-            <Image className='KakaoButton' src={btn_send_tiny} alt='' onClick={() => window.open(ETRANSFER_LINK_BHS)}/>
           </Flex>
           
           <Divider/>
 
           <Flex>
             <Text className='Etransfer'>민태자 469302-01-019772 KB국민은행</Text>
-            <Image className='KakaoButton'src={btn_send_tiny} alt='' onClick={() => window.open(ETRANSFER_LINK_MTJ)}/>
           </Flex>
         </Flex>
       </Flex>

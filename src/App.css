@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'EBSHMJESaeronRA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHMJESaeronRA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .App {
   font-family: 'JSDongkang-Regular';
   background-image: url(/src/img/korean_paper_3.png);
@@ -12,8 +19,17 @@
   background-size: cover;
 }
 
+.Heading {
+  font-family: 'EBSHMJESaeronRA';
+  font-size: 1.2em;
+}
+
 .MainPhoto {
   width: 60%;
+}
+
+.context {
+  margin-bottom: 20px;
 }
 
 .GoogleMap {
@@ -23,9 +39,9 @@
 
 .Etransfer {
   margin: 10px;
+  font-size: 95%;
 }
 
-.KakaoButton {
-  margin: 5px;
-  height: 100%;
+.centeredText {
+  text-align: center;
 }
