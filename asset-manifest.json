@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.38ee41b5.css",
+    "main.css": "/static/css/main.718b1832.css",
     "main.js": "/static/js/main.715e1f37.js",
     "static/js/787.3cbae497.chunk.js": "/static/js/787.3cbae497.chunk.js",
     "static/media/korean_paper_3.png": "/static/media/korean_paper_3.a2d6b9c329ad1d816eec.png",
     "static/media/photo_sample_1.png": "/static/media/photo_sample_1.05e76e552162184e3efc.png",
     "index.html": "/index.html",
-    "main.38ee41b5.css.map": "/static/css/main.38ee41b5.css.map",
+    "main.718b1832.css.map": "/static/css/main.718b1832.css.map",
     "main.715e1f37.js.map": "/static/js/main.715e1f37.js.map",
     "787.3cbae497.chunk.js.map": "/static/js/787.3cbae497.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38ee41b5.css",
+    "static/css/main.718b1832.css",
     "static/js/main.715e1f37.js"
   ]
 }
